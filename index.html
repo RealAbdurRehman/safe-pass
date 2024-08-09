@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generate strong, random passwords on the go, anywhere and everywhere." />
+    <title>SafePass</title>
+    <link rel="icon" type="image/x-icon" href="Public/zicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <div class="intro">
+                <img class="safepass-logo" src="Public/zicon.png" alt="SafePass icon." />
+                <h1><span class="comp-name">SafePass</span><br />Random Password Generator</h1>
+            </div>
+            <p class="est">Generate strong, random passwords on the go, <span class="bold">anywhere</span> and <span class="bold">everywhere.</span></p>
+        </header>
+
+        <div class="divider"></div>
+        <img id="password-strngth-img" src="Public/verystrong.svg" alt="Password is very strong."/>
+
+        <section class="password-display-els">
+            <div id="pass-display"></div>
+            <div class="strngth-els">
+                <div id="pass-strength">Very strong</div>
+                <button id="reload-btn"><img src="Public/zreload-icon.png" alt="&olarr;" /></button>
+            </div>
+            <button id="copy-btn">Copy</button>
+            <div class="copied-container">
+                <div class="copied-triangle"></div>
+                <div class="copied-box">Copied!</div>
+            </div>
+        </section>
+        
+        <p class="length-text">Password length:<span id="display-length" class="bold length-text length-number">15</span></p>
+
+        <section class="slider-items">
+            <button id="decrement-slider-btn">&minus;</button>
+            <input id="slider" type="range" min="1" max="50" value="15" />
+            <button id="increment-slider-btn">&plus;</button>
+        </section> 
+
+        <h2 class="pass-length-text">Want an even longer password?</h2>
+        <input id="pass-lngth-txt" type="text" placeholder="Enter Length" />
+
+        <section>
+            <p class="characters-heading">Characters used: </p>
+            <div class="checkboxes">
+                <label for="all-chars" class="bold checkbox-txt"><input id="all-chars" type="checkbox" checked>aBc</label> 
+                <label for="uppercase" class="bold checkbox-txt"><input id="uppercase" type="checkbox">ABC</label>
+                <label for="lowercase" class="bold checkbox-txt"><input id="lowercase" type="checkbox">abc</label>
+                <label for="numbers" class="bold checkbox-txt"><input id="numbers" type="checkbox" checked>123</label>
+                <label for="symbols" class="bold checkbox-txt"><input id="symbols" type="checkbox">#$&</label>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="divider-last"></div>
+            <div class="history-text">
+                <h2>History</h2>
+                <p>Previously generated <b>(copied)</b> passwords appear here.</p>
+            </div>
+            <button id="delete-all">Delete All</button>
+            <div class="prev-pass-container"></div>                            
+        </section>
+        
+    </main>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
