@@ -2,6 +2,8 @@
     "manifest_version": 3,
     "version": "1.0",
     "name": "SafePass",
+    "description": "A password generator that generates strong, random passwords as long as you want!",
+    "author": "RealAbdurRehman@github.com",
     "action": {
         "default_popup": "./index.html",
         "default_icon": "./Public/zicon.png"
